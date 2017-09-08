@@ -1,0 +1,28 @@
+version = '0.1-SNAPSHOT'
+
+ext.bbb='ddd'
+ext {
+	bbb = 'eee'
+}
+ext.bbb='ddd'
+// assert bbb == 'zzz'
+task aaa {
+	
+		println bbb
+	
+}
+
+task printVersion {
+	doFirst {
+		println "Before printVersion"			
+	}
+
+	doLast {
+		println "Version: $version"		
+	}
+
+}
+
+printVersion.doFirst{println "First Action2"}
+printVersion.doFirst{println "First Action1"}
+printVersion.doLast{println "Last Action"}

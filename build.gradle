@@ -1,0 +1,11 @@
+ext.bbb='ddd'
+ext {
+	bbb = 'eee'
+}
+ext.bbb='ddd'
+// assert bbb == 'zzz'
+task aaa {
+	
+		println "$bbb"
+	
+}
